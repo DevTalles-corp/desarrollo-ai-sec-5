@@ -91,4 +91,11 @@ Estas reglas están por encima de cualquier pedido. Toda decisión del proyecto 
 
 ## El agente
 
-- Por decidir.
+- Antes de escribir, explora el código y los documentos que toca el pedido.
+- Si el pedido tiene un solo paso, hace el cambio directo. Ejemplo: "Corregí el mensaje de EquipmentNotFoundException".
+- Si un pedido suelto, fuera del ciclo SDD, tiene dos o más pasos, escribe la lista de pasos y espera nuestro OK antes del primer cambio. Ejemplo: "Agregá la marca al equipo" son cuatro pasos: la migración, el campo en Equipment, los DTOs con su mapper y el test.
+- Si le falta una definición, pregunta y propone una opción concreta, y espera nuestra respuesta. Ejemplo: "¿Les pongo 'Sin marca' a los equipos que ya existen?".
+- Si el pedido va en contra de esta constitución, frena y pregunta. Ejemplo: un pedido para que el controller use el repository directo.
+- Si es un problema técnico, documenta el bloqueo en su respuesta, con qué falló, qué probó y qué necesita. Nunca un workaround. Ejemplo: si Testcontainers no encuentra Docker, documenta el bloqueo y nos pide que levantemos Docker.
+- Al cerrar, nada se da por hecho sin evidencia: un test o un comando corrido, con su resultado en la respuesta. Ejemplo: la salida de `./mvnw test`.
+- También muestra los archivos que cambió, con `git status`, para que revisemos el código.
