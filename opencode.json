@@ -1,5 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "instructions": ["docs/constitution.md"],
   "permissions": [
     { "action": "shell", "resource": "*", "effect": "ask" },
     { "action": "shell", "resource": "./mvnw *", "effect": "allow" },
